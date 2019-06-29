@@ -1,0 +1,231 @@
+###############################################################################
+#
+# IAR ELF Linker V8.32.1.169/W32 for ARM                  29/Jun/2019  21:10:12
+# Copyright 2007-2018 IAR Systems AB.
+#
+#    Output file  =  
+#        D:\Code\IAR_NUCLEOF103_Template\Debug\Exe\NucleoF103IARTemplate.out
+#    Map file     =  
+#        D:\Code\IAR_NUCLEOF103_Template\Debug\List\NucleoF103IARTemplate.map
+#    Command line =  
+#        -f C:\Users\Impulse\AppData\Local\Temp\EWE0D0.tmp
+#        (D:\Code\IAR_NUCLEOF103_Template\Debug\Obj\main.o
+#        D:\Code\IAR_NUCLEOF103_Template\Debug\Obj\misc.o
+#        D:\Code\IAR_NUCLEOF103_Template\Debug\Obj\startup_stm32f10x_md.o
+#        D:\Code\IAR_NUCLEOF103_Template\Debug\Obj\stm32f10x_gpio.o
+#        D:\Code\IAR_NUCLEOF103_Template\Debug\Obj\stm32f10x_rcc.o
+#        D:\Code\IAR_NUCLEOF103_Template\Debug\Obj\system_stm32f10x.o
+#        --no_out_extension -o
+#        D:\Code\IAR_NUCLEOF103_Template\Debug\Exe\NucleoF103IARTemplate.out
+#        --redirect _Printf=_PrintfFullNoMb --redirect _Scanf=_ScanfFullNoMb
+#        --map
+#        D:\Code\IAR_NUCLEOF103_Template\Debug\List\NucleoF103IARTemplate.map
+#        --config D:\Softwares\IAR\arm\config\linker\ST\stm32f103xB.icf
+#        --semihosting --entry __iar_program_start --vfe --text_out locale)
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+__dlib_version  = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The basic heap was selected because no calls to memory allocation
+functions were found in the application outside of system library
+functions, and there are calls to deallocation functions in the
+application.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at 0x800'0000 { ro section .intvec };
+"P1":  place in [from 0x800'0000 to 0x801'ffff] { ro };
+define block CSTACK with size = 1K, alignment = 8 { };
+define block HEAP with size = 512, alignment = 8 { };
+"P2":  place in [from 0x2000'0000 to 0x2000'4fff] {
+          rw, block CSTACK, block HEAP };
+
+No sections matched the following patterns:
+
+  rw  in "P2"
+
+
+  Section   Kind         Address   Size  Object
+  -------   ----         -------   ----  ------
+"A0":                              0xec
+  .intvec   ro code   0x800'0000   0xec  startup_stm32f10x_md.o [1]
+                    - 0x800'00ec   0xec
+
+"P1":                             0x3a4
+  .text     ro code   0x800'00ec  0x118  system_stm32f10x.o [1]
+  .text     ro code   0x800'0204   0xd2  stm32f10x_gpio.o [1]
+  .text     ro code   0x800'02d8   0x64  main.o [1]
+  .text     ro code   0x800'033c   0x20  stm32f10x_rcc.o [1]
+  .text     ro code   0x800'035c   0x1e  cmain.o [3]
+  .text     ro code   0x800'037a    0x4  low_level_init.o [2]
+  .text     ro code   0x800'037e    0x4  exit.o [2]
+  .text     ro code   0x800'0384    0xa  cexit.o [3]
+  .text     ro code   0x800'0390   0x14  exit.o [4]
+  .text     ro code   0x800'03a4   0x10  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'03b4    0xc  cstartup_M.o [3]
+  .text     ro code   0x800'03c0    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'03c4    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'03c8    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'03cc    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'03d0    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'03d4    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'03d8    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'03dc    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'03e0    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'03e4    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'03e8    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'03ec    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'03f0    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'03f4    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'03f8    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'03fc    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'0400    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'0404    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'0408    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'040c    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'0410    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'0414    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'0418    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'041c    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'0420    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'0424    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'0428    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'042c    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'0430    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'0434    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'0438    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'043c    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'0440    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'0444    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'0448    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'044c    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'0450    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'0454    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'0458    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'045c    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'0460    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'0464    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'0468    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'046c    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'0470    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'0474    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'0478    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'047c    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'0480    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'0484    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'0488    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'048c    0x4  startup_stm32f10x_md.o [1]
+                    - 0x800'0490  0x3a4
+
+"P2":                             0x400
+  CSTACK             0x2000'0000  0x400  <Block>
+    CSTACK  uninit   0x2000'0000  0x400  <Block tail>
+                   - 0x2000'0400  0x400
+
+Unused ranges:
+
+         From           To      Size
+         ----           --      ----
+   0x800'0490   0x801'ffff  0x1'fb70
+  0x2000'0400  0x2000'4fff    0x4c00
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module                  ro code  rw data
+    ------                  -------  -------
+command line/config:
+    ----------------------------------------
+    Total:
+
+D:\Code\IAR_NUCLEOF103_Template\Debug\Obj: [1]
+    main.o                      100
+    startup_stm32f10x_md.o      460
+    stm32f10x_gpio.o            210
+    stm32f10x_rcc.o              32
+    system_stm32f10x.o          280
+    ----------------------------------------
+    Total:                    1 082
+
+dl7M_tln.a: [2]
+    exit.o                        4
+    low_level_init.o              4
+    ----------------------------------------
+    Total:                        8
+
+rt7M_tl.a: [3]
+    cexit.o                      10
+    cmain.o                      30
+    cstartup_M.o                 12
+    ----------------------------------------
+    Total:                       52
+
+shb_l.a: [4]
+    exit.o                       20
+    ----------------------------------------
+    Total:                       20
+
+    Gaps                          6
+    Linker created                     1 024
+--------------------------------------------
+    Grand Total:              1 168    1 024
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                       Address  Size  Type      Object
+-----                       -------  ----  ----      ------
+?main                    0x800'035d        Code  Gb  cmain.o [3]
+CSTACK$$Base            0x2000'0000         --   Gb  - Linker created -
+CSTACK$$Limit           0x2000'0400         --   Gb  - Linker created -
+GPIO_Init                0x800'0205  0xc0  Code  Gb  stm32f10x_gpio.o [1]
+GPIO_WriteBit            0x800'02c5  0x12  Code  Gb  stm32f10x_gpio.o [1]
+RCC_APB2PeriphClockCmd   0x800'033d  0x1c  Code  Gb  stm32f10x_rcc.o [1]
+Region$$Table$$Base             0x0         --   Gb  - Linker created -
+Region$$Table$$Limit            0x0         --   Gb  - Linker created -
+SetSysClock              0x800'0131   0x8  Code  Lc  system_stm32f10x.o [1]
+SetSysClockTo72          0x800'0139  0xae  Code  Lc  system_stm32f10x.o [1]
+SystemInit               0x800'00ed  0x44  Code  Gb  system_stm32f10x.o [1]
+__cmain                  0x800'035d        Code  Gb  cmain.o [3]
+__exit                   0x800'0391  0x14  Code  Gb  exit.o [4]
+__iar_program_start      0x800'03b5        Code  Gb  cstartup_M.o [3]
+__low_level_init         0x800'037b   0x4  Code  Gb  low_level_init.o [2]
+__vector_table           0x800'0000        Data  Gb  startup_stm32f10x_md.o [1]
+_call_main               0x800'0369        Code  Gb  cmain.o [3]
+_exit                    0x800'0385        Code  Gb  cexit.o [3]
+_main                    0x800'0377        Code  Gb  cmain.o [3]
+delay                    0x800'02d9  0x1a  Code  Gb  main.o [1]
+exit                     0x800'037f   0x4  Code  Gb  exit.o [2]
+main                     0x800'02f3  0x44  Code  Gb  main.o [1]
+
+
+[1] = D:\Code\IAR_NUCLEOF103_Template\Debug\Obj
+[2] = dl7M_tln.a
+[3] = rt7M_tl.a
+[4] = shb_l.a
+
+  1 168 bytes of readonly  code memory
+  1 024 bytes of readwrite data memory
+
+Errors: none
+Warnings: none
